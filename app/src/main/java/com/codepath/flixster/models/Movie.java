@@ -2,18 +2,23 @@ package com.codepath.flixster.models;
 
 import org.json.JSONException;
 import org.json.JSONObject;
+import org.parceler.Parcel;
 
 /**
  * Created by danielpb on 6/22/17.
  */
 
+@Parcel
 public class Movie {
 
     // values from API
-    private String title;
-    private String overview;
-    private String posterPath; // only the path
-    private String backdropPath; // only the path
+    public String title;
+    public String overview;
+    public String posterPath; // only the path
+    public String backdropPath; // only the path
+
+    // no-fields constructor
+    public Movie() {}
 
     // initialize JSON data
     public Movie(JSONObject object) throws JSONException {
